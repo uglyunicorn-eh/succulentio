@@ -1,0 +1,31 @@
+[project]
+name = "succulentio"
+version = "0.0.1"
+authors = [{ name = "Pavel Reznikov", email = "pavel.reznikov@accolade.com" }]
+description = "SucculentIO is another way to run functions"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python :: 3",
+    "Framework :: AsyncIO",
+]
+requires-python = ">=3.12"
+dependencies = ["pydantic"]
+
+[project.scripts]
+succulentio = "succulentio.app:run"
+
+[project.optional-dependencies]
+cli = ["click"]
+aiohttp = ["aiohttp"]
+dev = ["black", "flake8"]
+test = ["pytest", "pytest-asyncio"]
+
+[project.urls]
+Homepage = "https://github.com/uglyunicorn-eh/succulentio"
+
+[tool.black]
+line-length = 120
+
+[tool.pytest.ini_options]
+addopts = "-vv"
