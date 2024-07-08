@@ -15,9 +15,6 @@ bootstrap: $(ENV) pip
 	$(PYTHON) -m pip install ".[test]"
 	$(PYTHON) -m pip install build
 
-# develop:
-# 	source $(ENV)/bin/activate && $(PYTHON) -m nova.utils.debug runserver -p 9023 nova/api/http
-
 test:
 	$(PYTHON) -m pytest
 
@@ -29,4 +26,3 @@ $(ENV):
 
 pip:
 	$(PYTHON) -m pip install --upgrade pip
-# @ $(PYTHON) -m pip config set global.extra-index-url "https://aws:$(CODEARTIFACT_SECRET)@plushcare-924474617161.d.codeartifact.us-west-2.amazonaws.com/pypi/private/simple/"

@@ -7,4 +7,5 @@ def setup(
     *,
     adapters: Optional[list] = None,
     middleware: Optional[list] = None,
-) -> SucculentManager: ...
+) -> SucculentManager:
+    return SucculentManager()
